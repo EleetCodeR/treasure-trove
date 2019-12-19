@@ -1,0 +1,6 @@
+NOTE :
+SHIFT + ALT + Arrow key : to duplicate selected line of code.
+ALT+ Arrow key : to move selected line of code.
+CTRL + / : Comment/uncomment code.
+CTRL + SPACE : to prompt Intellisense.
+CTRL + P : to quickly lookup & open a file.

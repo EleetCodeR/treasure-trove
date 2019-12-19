@@ -1,0 +1,1 @@
+print(sys.path)  # we will get an array of different paths as strings.
