@@ -16,7 +16,8 @@ for x in range(2, 5):  # will start from 2, instead of 0.
     print(x)
 
 print("Type 3")
-for x in range(0, 10, 2):  # 0 to 10 , increments by 2 steps (default 1 )
+# 0 to 10 , increments by 2 steps (default 1 ).Will iterate till 8 only.
+for x in range(0, 10, 2):
     print(x)
 
 # NOTE:  1 St Arg : Start, 2nd Arg : Stop., 3rd Arg : Step.

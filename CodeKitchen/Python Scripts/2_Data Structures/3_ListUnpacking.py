@@ -23,8 +23,8 @@ print(second)  # 2
 print(other)  # [3,4,5,6,7,8,9,10] a new list.
 
 # NOTE: When interested in first and last,
-first, *other, last = List
-print(first, last)  # 1 10
+first, second, *other, secondlast, last = List
+print(first, second, secondlast, last)  # 1 2 9 10
 print(other)  # [2, 3, 4, 5, 6, 7, 8, 9]
 
 # NOTE: Similar rules apply for a tuple.

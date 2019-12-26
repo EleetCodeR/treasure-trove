@@ -11,16 +11,19 @@ print(increment(2, 3))
 # for LIST [] brackets are used ; while  for tuple () brackets.
 # eg. number = (1,2,3)
 
-# NOTE: Keyword Argument. = binding arguments by mentioning parameters.
-print(increment(2, by=3))
+# NOTE: Keyword Argument:
+# use argument = parameters in function call,i.e,binding arguments by mentioning parameters.
+# if keyword arguments are used while functin call , the order of parameters need not match function prototype.
+print(increment(by=3, number=2))
 
-# NOTE: default Value of parameters can be set , while defining function itself.
-# rg. def increment(number, by=1):
+# NOTE: default Value of parameters can be set using keyword arguments while defining function itself.
+# eg. def increment(number, by=1):
 # function call : increment(2)
 
 # NOTE: TYPE ANNOTATION AND PARAMETER ANNOTATION.
 # we know we can annotate a variable , val:int = 2.
 # similarly, (below example: para.annotn + default val.)
+# These annotations do not impose typechecking .
 
 
 def increment2(number: int, by: int = 2):
