@@ -1,7 +1,7 @@
 point = (1, 2)
 print(point)
 
-# or we can even declare without round brackets, but must write trailing comma; otherwise could be construed as integer.
+# or we can even declare without round brackets, but must write trailing comma; otherwise interpreted as integer.
 point = 1,
 print(point)
 point = 1, 2
@@ -15,7 +15,7 @@ print(point)
 point = (1, 2) * 3
 print(point)
 
-# Converting to an iterable to a tuple.
+# Converting from an iterable to a tuple.
 point = tuple([1, 2, 3, 4])
 print(point)
 point = tuple("Hello World")

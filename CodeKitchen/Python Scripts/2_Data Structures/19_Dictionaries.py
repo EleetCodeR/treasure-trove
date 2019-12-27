@@ -1,24 +1,25 @@
 # NOTE : In Python we can only use immutable types as keys in dictionary.
-point = {"x": 1, "y": 2}
+point = {"x": 1, "y": 2, 1: 4}
+print(point[1])
 # but a better way is,
 point = dict(x=1, y=2)
 
 
-# in Dictionary we can not access elements using numeric-key/index , we use string.
+# in Dictionary we can not access elements using index , we use Key.
 point["x"] = 10  # changing the value
 point["z"] = 20  # defines a new key-val, when on LHS side.
 point["100"] = 100
 print(point)
 
 
-# NOTE: While trying to access the element if key does not exist in dictionary => "Key Error"
+# NOTE: While trying to access the element if key does not exist in dictionary => "Key Error" is thrown.
 # to avoid exception while access, we can check first;
 if "a" in point:
     print(point["a"])
 # OR we can use get-method.(and can also set default value)
 print(point.get("a", 10))
 # None.(if default value is not set)
-# returns default value when key is not found. (here-10)
+# returns default value when key is not found. (here:10)
 
 # An Entry can be removed using del method
 del point["x"]

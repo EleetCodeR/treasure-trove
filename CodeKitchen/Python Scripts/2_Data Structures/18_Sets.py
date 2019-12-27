@@ -1,5 +1,6 @@
 # SET : unordered collection of uniquely defined items.
-# hence, NOTE : Sets can not be indexed.=> throws TYPE ERROR.
+# hence,
+# NOTE : Sets can not be indexed.=> throws TYPE ERROR.
 
 numbers = [2, 3, 4, 5, 7, 7]
 
@@ -16,7 +17,8 @@ second.add(5)
 second.remove(5)
 print("Second:", second)
 
-# NOTE : What makes sets really useful, is the mathematical-operations/Set-operations that can be performed with them.
+# NOTE : What makes sets really useful,
+# is the mathematical-operations/Set-operations that can be performed with them.
 # Union:
 print("Union:", first | second)
 
