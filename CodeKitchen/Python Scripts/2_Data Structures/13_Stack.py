@@ -11,10 +11,10 @@ print(last)
 print("redirect", browsing_session)
 
 # Empty stack
-if browsing_session:
+if not browsing_session:
     print("Stack empty")
 # as [] empty list is boolean False.
 
 # to get item at tos.
-if not browsing_session:
+if browsing_session:
     browsing_session[-1]

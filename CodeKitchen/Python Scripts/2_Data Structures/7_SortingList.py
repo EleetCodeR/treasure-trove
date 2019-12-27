@@ -4,11 +4,12 @@ numbers = [3, 51, 8, 2, 6]
 numbers.sort()
 print(numbers)
 numbers.sort(reverse=True)
+print(numbers)
 
 # NOTE: sort method modifies original list.
 print(sorted(numbers))
 print(sorted(numbers, reverse=True))
-# NOTE: sorted method takes an iterable and returns a new list with sorted items.
+# NOTE: sorted method takes an iterable as input and from it returns a new list with sorted items.
 
 ###################### SORTING COMPLEX LISTS :TUPLES ############################################
 
@@ -27,7 +28,7 @@ items.sort(key=sort_item)
 print(items)
 # NOTE : sort method can not sort list of tuple by default, we therefore define a function;
 #  which will return an item on which we want to sort the list here.
-# observe that we are not calling this function from sort method, instead only reference is given as key.
+# observe that we are not calling this function from sort method call, instead only reference(no round brackets) is given as key.
 # This will call sort_item function for every item while iterating list return the key and sort the list.
 
 #################################################################################################

@@ -3,7 +3,10 @@
 # Anonymous functions are often arguments being passed to higher-order functions,
 # or used for constructing the result of a higher-order function that needs to return a function.
 
-# Syntax : lambda <parameters..>: <expression>
+# Syntax : lambda <input parameters..>: <expression for output>
+# There’s another syntactic difference between lambdas and regular function definitions:
+# Lambda functions are restricted to a single expression.
+# This means a lambda function can’t use statements or annotations—not even a return statement.
 
 items = [
     ("Product1", 10),

@@ -1,15 +1,18 @@
 letters = ['a', 'b', 'c']
 
 # ADD
-letters.append("d")  # add at last position.
+letters.append("d")  # adds new item at the last-position.
 print(letters)
-letters.insert(2, "_")  # add at an index.
+# add at an index.(rest of the list is kept same and shifted.)
+letters.insert(2, "_")
 print(letters)
 
 # REMOVE
-letters.pop(1)  # removes only one item from the given index.
+# Removes only one item from the given index.(by default last index.)
+letters.pop(1)
 print(letters)
-letters.remove("_")  # when you don't know the index of item to be removed.
+# when you don't know the index of item to be removed, just mentioned the item to be removed.
+letters.remove("_")
 print(letters)
 
 del letters[0]  # can remove items at an index.like pop.
