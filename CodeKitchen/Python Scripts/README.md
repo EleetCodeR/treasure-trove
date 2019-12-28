@@ -11,4 +11,8 @@ Also, I would like to share the source where I learned Python from,
 Link : https://codewithmosh.com/
 ```
 I really recommend this site for learning Python (and many other courses). 
-Mosh ("the instructor") has done the best job at teaching and demonstrating in a fluent and simple way and has taught all the things you will need to feel confident and get started with Python.
+Mosh ("the instructor") has done the best job at teaching and demonstrating in a fluent and simple way and has taught all the things you will need to feel confident and get started with Python. You can also checkout his youtube channel below.
+
+### Python Tutorial for Beginners [Full Course] By Mosh:
+https://www.youtube.com/watch?v=_uQrJ0TkZlc
+
