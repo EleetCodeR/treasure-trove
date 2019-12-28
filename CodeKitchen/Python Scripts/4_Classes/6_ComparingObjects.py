@@ -13,11 +13,12 @@ class Point:
 point = Point(10, 20)
 other = Point(1, 2)
 print(point == other)
-# False; as by default == operator compares references/addresses of the two object in memory.
-# hence implement __eq__ . (eq : equal)
+# False ; as by default == operator compares references/addresses of the two object in memory.
+# hence we need to implement __eq__ magic method . (eq : equal)
 print(point > other)
-#  TypeError: '>' not supported between instances of 'Point'
-# hence implement __gt__ . (gt : greater than)
+# TypeError: '>' not supported between instances of 'Point'
+# Basically we can not compare two object directly by > or < etc.
+# Hence implement magic method __gt__ . (gt : greater than)
 
 print(point < other)
 # NOTE : Python interpreter automatically translates above code even though we did not implement __lt__ .

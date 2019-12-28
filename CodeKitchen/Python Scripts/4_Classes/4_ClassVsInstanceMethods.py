@@ -22,5 +22,6 @@ class Point:
 
 #point = Point(0, 0)
 point = Point.zero()
-# Observe that in above code "zero" method is called on class ref and it's not an object instance.
+# Observe that in above code "zero" method is called on class reference and not on an object instance.
+# Also Class reference is passed to this class-method using which constructor is called ( cls(0,0) calls __init__ ).
 point.draw()
