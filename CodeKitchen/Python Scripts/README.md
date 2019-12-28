@@ -7,9 +7,9 @@ Python Documentation is the best source.I have numbered the Folders and Files so
 
 ## Source:
 Also, I would like to share the source where I learned Python from,
-```
-Link : https://codewithmosh.com/
-```
+
+https://codewithmosh.com/
+
 I really recommend this site for learning Python (and many other courses). 
 Mosh ("the instructor") has done the best job at teaching and demonstrating in a fluent and simple way and has taught all the things you will need to feel confident and get started with Python. You can also checkout his youtube channel below.
 
