@@ -3,7 +3,6 @@
 from pprint import pprint
 sentence = "This is a common interview question"
 
-# #My-Solution:
 # sentence = sentence.lower()
 # uniques = {*sentence}
 # max = 0
