@@ -31,18 +31,18 @@ cloud.add("PYTHON")
 print(cloud.tags)
 
 
-# To be able to read tags using subscript notation [ ], we need to implement respective magic method.
-# To make our class Subscriptable; implment magic method called __getitem__(self,key) .
+# To be able to read tags using subscript notation i.e,[ ], we need to implement respective magic method.
+# To make our class Subscript'able; implment magic method called __getitem__(self,key) .
 print(cloud["python"])
 
-# return 0 as per our implementation; std.dictionary would throw error, as the key/tag is not present.
+# following code returns 0 as per our implementation; std.dictionary however would throw error, as the key/tag is not present.
 print(cloud["pithon"])
 
-#  __getitem__  magic method only helps get the value using subscript , we can not set the value.
-# to set the value using subscript , implement __setitem__(self,key,value) .
+#  __getitem__  magic method only helps get the value using subscript , we can not set the value against a key.
+# to set the value using subscript , implement __setitem__(self,key,value) magic method.
 cloud["python"] = 10
 print(cloud["python"])
 
 len(cloud)  # implement __len__(self)
-# to make our container iterable , we need to return iterator object using in-built function iter and implement __iter__
+# to make our container iterable , we need to return iterator object using in-built function iter() and implement __iter__ magic method.
 # iterator-object is an object that walks a container and gets one item at a time.
