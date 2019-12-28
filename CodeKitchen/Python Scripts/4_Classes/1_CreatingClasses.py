@@ -14,5 +14,5 @@ point = Point()
 print(type(point))  # <class '__main__.Point'>
 print(isinstance(point, Point))  # True.
 
-# to construct an object of the class initialized with parameters;
-# we need to define a special method called as Constructors.
+# To construct an object of the class and initialize with parameters,
+# we need to define a special method called as Constructor.

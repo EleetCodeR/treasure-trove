@@ -1,9 +1,9 @@
 # Class Level method :
-# Many times we need to initialize an object of a class with multiple attributes, which can be a complex task at times;
-# We can use Class-Level methods (often called Factory Methods) to simply this.
-# 'cls' is used as parameter to class methods as a convention (can be anything);
-# most importantly though to declare a method as a class method it must be annotated/decorated;
-# using @classmethod decorator.
+# Many times we need to initialize an object of a class with multiple attributes,
+# Which can be a complex task at times; we can use Class-Level methods (often called Factory Methods) to simplify this.
+# To declare a method as a class method it must be annotated/decorated;
+# using "@classmethod" decorator.
+# 'cls' is used as parameter to class methods as a convention (can be any parameter);
 
 
 class Point:
@@ -22,5 +22,5 @@ class Point:
 
 #point = Point(0, 0)
 point = Point.zero()
-# Observe that in above code zero method is called on class ref and not instance.
+# Observe that in above code "zero" method is called on class ref and it's not an object instance.
 point.draw()
