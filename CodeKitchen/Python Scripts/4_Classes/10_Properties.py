@@ -42,14 +42,15 @@ class Product:
 # Here we have also provided references as parameters to the methods that should be used for get/set of price,
 # which are called internally.
 
-
-product = Product(10)
-product.price = 2
-print(product.price)
-
 # NOTE : 2
 # Even after defining the property, we can still see getter/setter methods (get_price, set_price) in the object interface.(also in IDE intellisense)
 # so to keep our object interface clean and simple we can use anotations (@property and @price.setter),
 # Instead of calling property function.
 # i.e, Above getter method write @property and above setter method write @<name of attribute>.setter (here @price.setter)
-# If we do not write setter method , then it becomes a read only property.(in trying to modify value will throw - AttributeError: can't set attribute)
+# (here we have given same name for the two methods, but annotations are different.)
+# If we do not write setter method , then it becomes a read only property.
+# ( then , in trying to modify the value will throw - AttributeError: can't set attribute)
+
+product = Product(10)
+product.price = 2
+print(product.price)
