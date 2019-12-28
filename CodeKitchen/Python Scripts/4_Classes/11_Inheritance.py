@@ -5,10 +5,6 @@ class Animal:
     def eat(self):
         print("eat")
 
-# Animal : Parent/Base class
-# Mammal : Child/Subclass
-# Fish : Child/Subclass
-
 
 class Mammal(Animal):
     def walk(self):
@@ -25,3 +21,9 @@ m.walk()
 m.eat()
 
 print(m.age)
+
+# Animal : Parent/Base class
+# Mammal : Child/Subclass
+# Fish : Child/Subclass
+# we mention the name of baseclass/Parent class in round brackets after the class name.
+# so the derived class then inherits the base class.

@@ -30,7 +30,9 @@ m = Mammal()
 
 print(m.weight)
 print(m.age)  # AttributeError: 'Mammal' object has no attribute 'age'
+
 # Why this error??
 # Constructor in Animal class was not executed (hence no age defined); because it was overriden by constructor in Subclass - Mammal.
-# This is called Method Overriding.It can be used to Extend the methods defined in base class.
-# If we want to execute cons'tor of Base class first , we can use super() method to call methods of base class from anywhere in subclass.
+# This is called Method Overriding. but It can also be used to Extend the methods defined in base class.
+# If we want to execute constructor (C'tor) of Base class first ,
+# we can use super() method to call methods of base class from anywhere in subclass.
