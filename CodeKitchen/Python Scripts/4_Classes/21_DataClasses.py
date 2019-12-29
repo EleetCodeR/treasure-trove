@@ -24,10 +24,10 @@ from collections import namedtuple
 
 # NOTE: but there is a better way to deal with Data Classes than implementing these magic methods;
 # i.e, Using namedtuple method from Collections module to create a type/class.
-Point = namedtuple("Point", ["x", 'y'])
+Point = namedtuple("Point", ['x', 'y'])
 p1 = Point(x=1, y=2)
 p2 = Point(1, 2)
-print(p1 == p2)
+print(p1 == p2)  # True
 # NOTE : nametuple are better; because it has attributes just like a class; unlike a regular tuple.
 print(p1.x)
 # NOTE: namedtulpes are IMMUTABLE.

@@ -51,10 +51,10 @@ class NetworkStream(Stream):
 # (eg. Both streams have 'read' method, so we MUST REMEMBER to keep is same for any new stream to maintain consistency.)
 
 # How to Solve these Problems?
-# - Abstract Base Class. (make Stream class Abstract Base-Class by deriving from ABC class)
+# - use Abstract Base Class:(make Stream class Abstract Base-Class by deriving from ABC class)
 # - define a common interface for all streams.(using decorator @abstractmethod)
-# - stream = Stream()  => this will show redline: Abstract class 'Stream' with abstract methods instantiated
-# and throw error : TypeError: Can't instantiate abstract class Stream with abstract methods read
+# - stream = Stream()  => this will show redline/syntax-error : Abstract class 'Stream' with abstract methods is instantiated,
+# and throw error : TypeError: Can't instantiate abstract class Stream with abstract methods read.
 # it is because when a class has Abstract method, the class becomes Abstract Class and we can not instantiate abstract class.
 
 class MemoryStream(Stream):
@@ -64,8 +64,8 @@ class MemoryStream(Stream):
 
 
 # NOTE:
-    # any class derived from abstract class ('Stream') has to implement abstractmethod ('read'); otherwise that class also become abstract.
-    # hence to instantiate MemoryStream (i.e, to Convert it into a CONCRETE CLASS), define read method.
+    # any class derived from abstract class (here 'Stream') has to implement abstractmethod (here 'read'); otherwise that class also become abstract,
+    # hence to instantiate MemoryStream (i.e, to Convert it into a CONCRETE CLASS), must define read method.
 
 stream = MemoryStream()
 stream.open()

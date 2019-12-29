@@ -24,9 +24,9 @@ class Stream:
 
 class FileStream(Stream):
     def read(self):
-        print?("Reading data from a File.")
+        print("Reading data from a File.")
 
 
 class NetworkStream(Stream):
     def read(self):
-        print?("Reading data from a network.")
+        print("Reading data from a network.")
