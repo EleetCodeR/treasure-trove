@@ -5,6 +5,9 @@ These are the Python Scripts I had written during learning and hands-on Practice
 I have written comments for better understanding and revision of the topics, however for more depth regarding any coding construct,
 Python Documentation is the best source.I have numbered the Folders and Files so that there is a proper flow in concepts. For now you may focus on topics 1-6, as I will update remaining soon.
 
+### IDE:
+Although there are many good options out there, I will recommend using "VisualStudioCode" , it has become my most favourite IDE to work with since it has advantages of both, Lightness and swiftness of SublimeText and power,usefulness of Microsoft-Visual studio.
+
 ## Source:
 Also, I would like to share the source where I learned Python from,
 
