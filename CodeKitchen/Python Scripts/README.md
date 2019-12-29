@@ -1,6 +1,8 @@
 # Python Scripts
 These are the Python Scripts I had written during learning and hands-on Practice. I think Scripts are very basic and easy to understand along with comments provided, however some basic programming familiairty might be necessary. These scripts are meant for a quick-revisit or introduction to python.
 
+Python Version used in Scripts : Python 3.7.3
+
 ## Instructions:
 I have written comments for better understanding and revision of the topics, however for more depth regarding any coding construct,
 Python Documentation is the best source.I have numbered the Folders and Files so that there is a proper flow in concepts. For now you may focus on topics 1-6, as I will update remaining soon.
