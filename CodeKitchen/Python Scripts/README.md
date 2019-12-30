@@ -2,6 +2,7 @@
 These are the Python Scripts I had written during learning and hands-on Practice. I think Scripts are very basic and easy to understand along with comments provided, however some basic programming familiairty might be necessary. These scripts are meant for a quick-revisit or introduction to python.
 
 Python Version used in Scripts : Python 3.7.3
+Operating System : Windows 10
 
 ## Instructions:
 I have written comments for better understanding and revision of the topics, however for more depth regarding any coding construct,
