@@ -16,7 +16,7 @@ All these compiled files are in binary format.
 Main module file/ entry-point file (default:'app.py') is always compiled , hence there is no-compiled file for it in pycache folder.
 
 ### But How does compiler understand that these compiled files are up-to-date or not?
-for this, compiler compares the date-time of source code file/files and that of compiled file/files , 
-if it matched then compiled files is up-to-date and used.
+for this, compiler compares the date-time of source code and that of compiled files , 
+if its a match, then compiled files are up-to-date and used.
 
 
