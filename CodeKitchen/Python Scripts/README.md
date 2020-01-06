@@ -1,12 +1,12 @@
 # Python Scripts
-These are the Python Scripts I had written during learning and hands-on Practice. I think Scripts are very basic and easy to understand along with comments provided, however some basic programming familiairty might be necessary. These scripts are meant for a quick-revisit or introduction to python.
+These are the Python Scripts I had written during learning and hands-on Practice. I think Scripts are very basic and easy to understand along with comments provided, however some basic programming familiarity might be necessary. These scripts are meant for a quick-revisit to Python.
 
-Python Version used in Scripts : Python 3.7.3
-Operating System : Windows 10
+Python Version used in Scripts : Python 3.7.3.
+
+Operating System : Windows 10.
 
 ## Instructions:
-I have written comments for better understanding and revision of the topics, however for more depth regarding any coding construct,
-Python Documentation is the best source.I have numbered the Folders and Files so that there is a proper flow in concepts.
+I have written comments for better understanding and revision of the topics, however for more depth regarding any coding construct, Python Documentation is the best source. I have numbered the files and folders so that there is a proper flow in concepts.
 
 For now you may focus on topics 1-4 first, then follow this order:
 
@@ -28,6 +28,7 @@ Also, I would like to share the source where I learned Python from,
 https://codewithmosh.com/
 
 I really recommend this site for learning Python (and many other courses). 
+
 Mosh ("the instructor") has done the best job at teaching and demonstrating in a fluent and simple way and has taught all the things you will need to feel confident and get started with Python. You can also checkout his youtube channel below.
 ### YouTube Channel:
 https://www.youtube.com/user/programmingwithmosh/
