@@ -6,7 +6,18 @@ Operating System : Windows 10
 
 ## Instructions:
 I have written comments for better understanding and revision of the topics, however for more depth regarding any coding construct,
-Python Documentation is the best source.I have numbered the Folders and Files so that there is a proper flow in concepts. For now you may focus on topics 1-6, as I will update remaining soon.
+Python Documentation is the best source.I have numbered the Folders and Files so that there is a proper flow in concepts.
+
+For now you may focus on topics 1-4 first, then follow this order:
+
+1. Go to app.py and read section numbered 50,
+2. file named 51_CompiledFiles.md,
+3. Go to app.py and read section numbered 52,
+4. file named 53_Intra_PackageRef.md,
+5. file named 54_dirFunction.py,
+6. file named 55_executeModule.md and NOTE in app.py,
+
+then continue with 6th topic, I will be adding more topics soon.
 
 ### IDE:
 Although there are many good options out there, I will recommend using "VisualStudioCode" , it has become my most favourite IDE to work with since it has advantages of both, Lightness and swiftness of SublimeText and power,usefulness of Microsoft-Visual studio.
