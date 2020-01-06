@@ -1,6 +1,6 @@
 from pathlib import Path
 
-path = Path("ecommerce")
+path = Path(r"CodeKitchen\Python Scripts\ecommerce")
 # path.exists()
 # path.mkdir()
 # path.rmdir()
@@ -18,15 +18,15 @@ print(paths, end='\n')
 paths = [p for p in path.iterdir() if p.is_dir()]
 print(paths, end='\n')
 
-# LIMITATIONS:
+# LIMITATIONS of iterdir() and ListComprehension like above:
 # No pattern matching/searching.
 # No recursive search.
-# hence use glob.
+# hence we use glob().
 
 # NOTE: PATTERN SEARCHING + RECURSIVE SEARCH
 # Pattern for all files *.*
 py_files = [p for p in path.glob("*.py")]
 print(py_files, end='\n')
-
+# rglob for Recursive glob
 py_files = [p for p in path.rglob("*.py")]
 print(py_files, end='\n')
