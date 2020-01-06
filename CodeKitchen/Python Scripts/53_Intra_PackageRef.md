@@ -7,14 +7,17 @@ Here in our case we have created a "customer" subpackage (inside "ecommerce") , 
 
 For this we can use Absolute-import or Relative-import: (Now inside "sales.py" we write...),
 ### Absolute-import : 
+~~~~
 from ecommerce.customer import contact
-
+~~~~
 ### Relative-import :
+~~~~
 from ..customer import contact
+~~~~
 
 Absolute Import should preferred over Relative , however if there is an n-tiered project and import becomes too noisy with complex layers (too many dot operators) , relative import becomes suitable.
-see sales.py file INTRA-PACKAGE REFERENCES section.
+See sales.py file INTRA-PACKAGE REFERENCES section.
 
-### NOTE: IDE trivia,
-One dot = current package (shopping) (here intellisense shows all modules/subpackages of current package)
-Another dot = come outside current package (now in ecommerce) (here intellisense shows all modules/subpackges of toplevel package of current file)
+### NOTE:
+One dot = current package (shopping) (here intellisense shows all modules/subpackages of current package).
+Another dot = come outside current package (now in ecommerce) (here intellisense shows all modules/subpackges of toplevel package of current file).
