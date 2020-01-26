@@ -24,6 +24,7 @@ def routingInfo_protocol():
 
 
 routingInfo_protocol()
+# V=4 ,E=5
 # g.addEdge(0, 1, 2)
 # g.addEdge(1, 2, 3)
 # g.addEdge(2, 3, 11)

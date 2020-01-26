@@ -12,4 +12,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.sendall(b'data2')  # sending file name as query.
     data = s.recv(1024)
 
-print('Receiving Data From Server...\n', repr(data))
+print('\n Receiving Data From Server...\n\n', repr(data))

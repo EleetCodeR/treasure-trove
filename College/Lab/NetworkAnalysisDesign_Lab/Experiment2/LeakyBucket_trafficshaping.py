@@ -9,46 +9,49 @@ condition = threading.Condition()
 BUFFER_LEN = 10
 
 
-def packet_producer(e):
+def packet_producer(e1):
     global buffer
     while(True):
-        if(e.isSet()):
-            break
+
         # lock acquire
         condition.acquire()
         # buffer should not be full.
         if(buffer.__len__() == BUFFER_LEN):
+            new_pkt = randint(100, 1000)
             print(
-                f"Buffer is full !!!..waiting for consumer, Buffer :{buffer} \n")
+                f"Buffer is full! ---> waiting for consumer, Buffer :{buffer} \n")
+            print(f"Packet Lost :{new_pkt} \n")
             condition.wait()
             print(
-                f"Space in buffer ! Consumer consumed some packets, Buffer :{buffer} \n")
+                f"Space in buffer! ---> Consumer consumed , Buffer :{buffer} \n")
 
         if(buffer.__len__() < BUFFER_LEN):
             new_pkt = randint(100, 1200)
             buffer.append(new_pkt)
-            print(f" New Packet added !!! Buffer :{buffer} \n")
-            # Notify consumer and lock release
-            condition.notify()
-            condition.release()
-            time.sleep(random())
+            print(f"New Packet added! ---> Buffer :{buffer} \n")
+
+        # Notify consumer and lock release
+        condition.notify()
+        condition.release()
+        if(e1.isSet()):
+            break
+        time.sleep(random())
 
 
-def packet_consumer(bandwidth, e):
+def packet_consumer(bandwidth, e2):
     global buffer
     current_bw = bandwidth
     residue = 0
     packet = 0
 
     while(True):
-        if(e.isSet()):
-            break
+
         # lock acquire
         condition.acquire()
         if(buffer.__len__() == 0):
-            print("Empty Buffer !!! consumer is waiting... \n")
+            print("Empty Buffer! ---> consumer is waiting...\n")
             condition.wait()
-            print("Producer added a new packet !!! \n")
+            print("---> consumer resumes. \n")
 
         if(residue == 0 and buffer.__len__() != 0):
             packet = buffer.pop(0)
@@ -58,11 +61,11 @@ def packet_consumer(bandwidth, e):
 
         if(packet < current_bw):
             print(
-                f"Current BW :{current_bw} ,Packet size :{packet}, Packet sent:{packet}, Remaining BW:{current_bw-packet}\n")
+                f" --------> Current BW :{current_bw}, Packet size :{packet}, Packet sent:{packet}, Remaining BW:{current_bw-packet} \n")
             current_bw = current_bw-packet
         else:
             print(
-                f"Current BW :{current_bw} ,Packet size :{packet}, Packet sent:{current_bw}, Remaining BW:{0} \n")
+                f" --------> Current BW :{current_bw}, Packet size :{packet}, Packet sent:{current_bw}, Remaining BW:{0} \n")
             residue = packet-current_bw
             current_bw = bandwidth
             continue
@@ -70,26 +73,37 @@ def packet_consumer(bandwidth, e):
         # lock release
         condition.notify()
         condition.release()
+        if(e2.isSet()):
+            break
         time.sleep(random())
 
 
 def Leaky_bucket():
-    bandwidth = int(input("Enter a Bandwidth for network traffic shaping:"))
+    bandwidth = int(
+        input("\n Enter Bandwidth : \n"))
 
-    e = threading.Event()
+    e1 = threading.Event()
+    e2 = threading.Event()
 
-    producer_thread = threading.Thread(target=packet_producer, args=(e,))
+    producer_thread = threading.Thread(target=packet_producer, args=(e1,))
     consumer_thread = threading.Thread(
-        target=packet_consumer, args=(bandwidth, e,))
+        target=packet_consumer, args=(bandwidth, e2,))
 
     producer_thread.start()
     consumer_thread.start()
 
-    producer_thread.join(10)
-    consumer_thread.join(10)
+    print("\n Producer executes join ! \n")
+    producer_thread.join(1)
+    print("\n Consumer executes join ! \n")
+    consumer_thread.join(1)
 
-    if producer_thread.is_alive() or consumer_thread.is_alive():
-        e.set()
+    if producer_thread.is_alive():
+        print(" \n Producer will be terminated ! \n")
+        e1.set()
+
+    if consumer_thread.is_alive():
+        print(" \n Consumer will be terminated ! \n")
+        e2.set()
 
 
 Leaky_bucket()
