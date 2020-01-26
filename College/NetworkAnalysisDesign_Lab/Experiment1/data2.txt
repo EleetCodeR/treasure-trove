@@ -1,1 +1,0 @@
-Showing all Data in file "data2.txt"
