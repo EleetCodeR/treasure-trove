@@ -19,16 +19,17 @@ def packet_producer(e1):
         if(buffer.__len__() == BUFFER_LEN):
             new_pkt = randint(100, 1000)
             print(
-                f"Buffer is full! ---> waiting for consumer, Buffer :{buffer} \n")
-            print(f"Packet Lost :{new_pkt} \n")
+                f" ======== Buffer is full! ---> waiting for consumer, Buffer :{buffer} \n")
+            print(f" ======== Packet Lost :{new_pkt} \n")
             condition.wait()
             print(
-                f"Space in buffer! ---> Consumer consumed , Buffer :{buffer} \n")
+                f" ======== Space in buffer! ---> Consumer consumed , Buffer :{buffer} \n")
 
         if(buffer.__len__() < BUFFER_LEN):
-            new_pkt = randint(100, 1200)
-            buffer.append(new_pkt)
-            print(f"New Packet added! ---> Buffer :{buffer} \n")
+            while(buffer.__len__() < randint(2, 4)):
+                new_pkt = randint(100, 1200)
+                buffer.append(new_pkt)
+                print(f" ======== New Packet added! ---> Buffer :{buffer} \n")
 
         # Notify consumer and lock release
         condition.notify()
@@ -49,9 +50,9 @@ def packet_consumer(bandwidth, e2):
         # lock acquire
         condition.acquire()
         if(buffer.__len__() == 0):
-            print("Empty Buffer! ---> consumer is waiting...\n")
+            print("--------> Empty Buffer! ---> consumer is waiting...\n")
             condition.wait()
-            print("---> consumer resumes. \n")
+            print("--------> consumer resumes. \n")
 
         if(residue == 0 and buffer.__len__() != 0):
             packet = buffer.pop(0)
