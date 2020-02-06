@@ -1,0 +1,6 @@
+.project
+.vscode
+*.pyc
+*.pdf
+*.png
+*.docx
