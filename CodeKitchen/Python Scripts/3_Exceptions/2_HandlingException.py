@@ -6,4 +6,5 @@ except ValueError as ex:
     print(ex, type(ex))
 else:
     print("No exception was thrown.")
+
 print("Execution continues.")
