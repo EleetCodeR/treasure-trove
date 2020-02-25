@@ -67,14 +67,16 @@ def multiplicative_inverse(e, phi):
 
 def encrypt(pr_k, plaintext):
     key, n = pr_k
-    cipher = [(ord(char) ** key) % n for char in plaintext]
+    # cipher = [(ord(char) ** key) % n for char in plaintext]
+    cipher = [pow(ord(char), key, n) for char in plaintext]
     return cipher
 
 
 def decrypt(pub_k, ciphertext):
     key, n = pub_k
     # using a^b mod m
-    plain = [chr((char ** key) % n) for char in ciphertext]
+    # plain = [chr((char ** key) % n) for char in ciphertext]
+    plain = [chr(pow(char, key, n)) for char in ciphertext]
     # Return the array of bytes as a string
     return ''.join(plain)
 
@@ -114,3 +116,4 @@ if __name__ == '__main__':
     print("Decrypting Message...")
     print(
         f"\n Public Key: {public} , Decrypted message:{decrypt(public, encrypted_msg)}")
+    #print(f"\n Public Key: {public} , Decrypted message:Welcome To NAD Lab")
