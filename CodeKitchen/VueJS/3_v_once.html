@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        <h1 v-once>{{ title }}</h1>
+        <p>{{sayHello()}}</p>
+        <p>v-once directive can be used to disable re-rendering of an element upon changes.</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello World!',
+                link: 'http://google.com'
+            },
+            methods: {
+                sayHello: function () {
+                    this.title = 'Hola!!'
+                    return this.title;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

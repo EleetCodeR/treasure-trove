@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<body>
+    <div id="app">
+        <h1 v-once>{{ title }}</h1>
+        <p>{{sayHello()}}</p>
+        <hr>
+        <p>{{finishedlink}}</p>
+        <hr>
+        <p v-html="finishedlink"></p>
+        <li>v-html directive lets us output the RAW html code using vue.</li>
+        <li>Use this directive very carefully, only if you trust the source of code and if it is sanitized before
+            processing.</li>
+        <li>As this can lead to Cross-site scripting attack if not used carefully.</li>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello World!',
+                link: 'http://google.com',
+                finishedlink: ' <a href="http://google.com">Google</a>'
+            },
+            methods: {
+                sayHello: function () {
+                    this.title = 'Hola!!'
+                    return this.title;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
