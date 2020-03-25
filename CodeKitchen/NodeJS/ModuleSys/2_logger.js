@@ -12,7 +12,7 @@ function log(message) {
 // module.exports.log = log;
 // module.exports.endPoint = url;  // (we can export with different identifier)
 
-//  ====== export as an object with method
+//  ====== export as an object with method.
 // module.exports.log = log;
 
 //====== exporting as a single method,
