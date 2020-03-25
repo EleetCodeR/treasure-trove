@@ -4,7 +4,7 @@ console.log(module);
 // loading a module,
 // var logger = require('./logger')
 // better to use const to avoid overwritting.
-const logger = require('./logger')
+const logger = require('./2_logger')
 console.log(logger);
 
 //====== when exported as an object

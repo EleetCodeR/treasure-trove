@@ -1,6 +1,7 @@
 // console.log(); // global
 // console object is a type of global object. (Global Scope.)
-// similarly,
+
+// similarly following are properties of global object ,
 // setTimeout()
 // clearTimeout()
 // setInterval()
