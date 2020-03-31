@@ -10,8 +10,8 @@
 // in NODE we have "global" obj which can be,
 // used to access all such global functions and objects.
 //global.console.log()
-// but variables or functions such as below can not be accessed using this.
-// not added into global scope, (file/module scope)
+// but variables or functions (user defined) such as below can not be accessed using this.
+// not added into global scope, (they have file/module scope)
 var message = '';
 console.log(global.message);
 

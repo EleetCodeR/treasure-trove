@@ -1,5 +1,6 @@
 const EventEmitter = require('events');
-// class named should be pascal case.
+// returns a class instead of an Object.
+// class name should be pascal case.
 const emitter = new EventEmitter();
 
 // Register a Listener to listen to event first.

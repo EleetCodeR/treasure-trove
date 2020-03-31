@@ -3,7 +3,7 @@ const fs = require('fs');
 const files = fs.readdirSync('./');
 console.log(files);
 
-//Asych form,
+//Async form, and concept of callback function.
 fs.readdir('./', function (err, files) {
     if (err) console.log('Error :', err);
     else console.log('Result:', files);
