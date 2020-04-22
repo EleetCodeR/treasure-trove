@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h3>2 Way Binding:</h3>
+        <input type="text" v-model="name">
+        <p>{{ name }}</p>
+        <li>v-model directive is used to achieve 2-way binding.</li>
+        <hr>
+        <h3>Computed Properties:</h3>
+        <button v-on:click="counter++">Increase</button>
+        <button v-on:click="counter--">Decrease</button>
+        <button v-on:click="secondCounter++">Increase 2nd-Counter</button>
+        <p>Counter : {{ counter }} | secondCounter: {{ secondCounter }}</p>
+        <p>Result : {{ result()}} | {{ output }}</p>
+        <hr>
+        <h3>Alternative to Computed Properties: watch</h3>
+        <li>watch is used to execute code upon data changes.</li>
+        <li>watch is used mainly for Asynchronous code, otherwise should prefer computed Properties as they are
+            optimized (but are synchronus).</li>
+        <li>define a property to watch as a key in watch block as shown.</li>
+        <li>Vue automatically passes changed value as argument. (so can catch it.)</li>
+        <li>so counter is now automatically set to zero after every 2 sec.</li>
+    </div>
+</body>
+
+</html>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'Deku:Izuku Midoriya',
+            counter: 0,
+            secondCounter: 0,
+        },
+        computed: {
+            output: function () {
+                console.log("Computed");
+                return this.counter > 5 ? "Greater than 5" : "Smaller than 5";
+            }
+        },
+        watch: {
+            counter: function (value) {
+                var vw = this;
+                setTimeout(function () {
+                    vw.counter = 0;
+                }, 2000);
+            }
+        },
+        methods: {
+            result: function () {
+                console.log("Result");
+                return this.counter > 5 ? "Greater than 5" : "Smaller than 5";
+            }
+        }
+    });
+</script>
