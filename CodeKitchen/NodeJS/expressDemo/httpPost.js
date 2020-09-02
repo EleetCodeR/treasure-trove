@@ -2,7 +2,7 @@ const Joi = require("joi"); // for input validation.
 const express = require("express");
 const app = express();
 
-app.use(express.json());
+app.use(express.json()); // enabling json in express
 
 const courses = [
   { id: 1, name: "course1" },
@@ -26,7 +26,7 @@ app.post("/api/courses", (req, res) => {
   const course = {
     id: courses.length + 1,
     // assumming request body has an object and that object has a name property.
-    // need to enble parsing of json objects (using a middleware)in body of request, as not enables by default by express.
+    // need to enble parsing of json objects (using a middleware)in body of request, as not enabled by-default by express.
     name: req.body.name,
   };
   courses.push(course);
